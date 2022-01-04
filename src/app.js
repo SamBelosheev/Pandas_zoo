@@ -1,29 +1,26 @@
 // Animals
 
-const tinyImages = ["./src/img/panda_tiny.webp", "./src/img/eagle_tiny.webp", "./src/img/gorila_tiny.webp", "./src/img/aligator_tiny.webp"]
-const largeImages = ["","./src/img/Main_Eagles.jpg", "./src/img/Main_gorillas.jpg", "./src/img/Main_alligators.jpg"]
-const imageTitles = ["The Giant Pandas", "Eagles", "Gorillas", "Aligators"]
-const isVideo = [true, false, false, false]
-
-
-
-for (let i = 0; i <= 3 ; i++){
-    document.querySelector(".vert_foto").innerHTML += `<div class=\"tiny_foto\">\n` +
-        `                <img class=\"tiny_fotos\" src= \"${tinyImages[i]}\"  onclick = \"setActiveButton(${i})\">\n` +
-        `            </div>\n` +
-        `            <p class=\"animal_name\">${imageTitles[i]}</p>`
-
-}
-const fotoList = document.querySelectorAll('.tiny_fotos')
-
-for (let i = 0; i <= 3 ; i++){
-    fotoList[i].onclick = () => {
-        setActiveButton(i)
+function getJsonSync(url){
+    var req = new XMLHttpRequest();
+    var json
+    req.open('GET', url, false)
+    req.onload = function (){
+        json = JSON.parse(req.response);
     }
+    req.send(null)
+    return json
 }
 
+const animals = getJsonSync("./src/animals.json")
 
-const animalList = document.querySelectorAll(".animal_name")
+
+for (let i = 0; i <= animals.length - 1 ; i++)
+    document.querySelector(".vert_foto").innerHTML += `<div class=\"tiny_foto\">\n` +
+        `                <img class=\"tiny_fotos\" src= \"${animals[i].tinyImage}\"  onclick = \"setActiveButton(${i})\">\n` +
+        `            </div>\n` +
+        `            <p class=\"animal_name\">${animals[i].imageTitle}</p>`
+
+const fotoList = document.querySelectorAll('.tiny_fotos')
 
 
 const mainText = document.querySelector('.main_text')
@@ -32,32 +29,25 @@ const mainScreen = document.querySelector('.main_foto')
 
 const mainVideos = document.querySelector('.main_videos')
 
-const forPadding = document.querySelector('.for_padding')
-
-setTimeout(() => {
-    addStylesTo(fotoList[0])
-},  10)
-
-
-function addStylesTo (){
-    fotoList[0].style.backgroundColor = '#2A8086'
-}
-
 function setActiveButton (activePhotoIndex) {
     for (var i = 0; i <= fotoList.length - 1; i++)
         fotoList[i].style.backgroundColor = '#E5E5E5'
     fotoList[activePhotoIndex].style.backgroundColor = '#2A8086'
-    mainScreen.src = largeImages[activePhotoIndex]
-    mainText.textContent = imageTitles[activePhotoIndex]
-    if (isVideo [activePhotoIndex]){
+
+    mainText.textContent = animals[activePhotoIndex].imageTitle
+    if (animals[activePhotoIndex].isVideo){
+        mainVideos.data = animals[activePhotoIndex].largeImage
         mainVideos.style.display = 'block'
         mainScreen.style.display = 'none'
     }
     else {
+        mainScreen.src = animals[activePhotoIndex].largeImage
         mainVideos.style.display = 'none'
         mainScreen.style.display = 'block'
     }
 }
+
+setActiveButton(0)
 
 
 

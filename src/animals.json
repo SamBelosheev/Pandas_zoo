@@ -1,0 +1,6 @@
+[
+  {"tinyImage": "./src/img/eagle_tiny.webp", "largeImage": "./src/img/Main_Eagles.jpg", "imageTitle": "Eagles", "isVideo": false},
+  {"tinyImage": "./src/img/panda_tiny.webp", "largeImage": "http://www.youtube.com/embed/GlIzuTQGgzs", "imageTitle": "The Giant Pandas", "isVideo": true},
+  {"tinyImage": "./src/img/gorila_tiny.webp", "largeImage": "./src/img/Main_gorillas.jpg", "imageTitle": "Gorillas", "isVideo": false},
+  {"tinyImage": "./src/img/aligator_tiny.webp", "largeImage": "./src/img/Main_alligators.jpg", "imageTitle": "Aligators", "isVideo": false}
+]
