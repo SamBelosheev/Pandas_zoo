@@ -58,12 +58,27 @@ const map = navigationList[1]
 const zoos = navigationList[2]
 const contactUS = navigationList[3]
 const design = navigationList[4]
-
+const buttonSend = document.querySelector(".contactUs_button")
+const shieldFon = document.querySelector(".shield_fon")
+const contactFon = document.querySelector(".contactUs_container")
 
 
 contactUS.onclick = () => {
-    window.prompt()
+    shieldFon.style.display = 'block'
+    contactFon.style.display = 'flex'
 }
+
+shieldFon.onclick = () => {
+    contactFon.style.display = 'none'
+    shieldFon.style.display = 'none'
+}
+
+buttonSend.onclick = () => {
+    contactFon.style.display = 'none'
+    shieldFon.style.display = 'none'
+}
+
+
 
 const SingList = document.querySelectorAll('.buttons')
 
