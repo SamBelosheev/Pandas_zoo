@@ -31,12 +31,70 @@
         </div>
         <div class="header__buttons">
             <img src="./src/img/Search.svg">
-            <button class="buttons button__log">LOG IN</button>
-            <button class="buttons button__sing">SIGN UP</button>
+            <button data-parent="1" class="buttons button__log menu-catalog__link _sub-menu-active">LOG IN</button>
+            <button data-parent="2" class="buttons button__sing menu-catalog__link _sub-menu-active">SIGN UP</button>
         </div>
         <button type="button" class="icon_menu"><span></span></button>
     </div>
 </header>
+<div class="window_sing">
+    <div data-submenu="1" class="window_singIn_container">
+        <div class="window_sing_header">
+            <object type="image/svg+xml" data="./src/img/Logo-large.svg" class="logo-object"></object>
+        </div>
+        <div class="window_sing_choose">
+            <h3>Create acccount</h3>
+            <h3>Log in</h3>
+        </div>
+        <div class="window_sing_buttons">
+            <button class="google_button"><img src="./src/img/Google%20Logo.svg">Google Sign in</button>
+            <button class="facebook_button"><img src="./src/img/Facebook%20Logo.svg">Facebook Sign in</button>
+        </div>
+        <div class="window_singIn_name">
+            <h5>NAME</h5>
+            <input class="input_name">
+        </div>
+        <div class="window_sing_email">
+            <h5>EMAIL</h5>
+            <input class="input_name">
+        </div>
+        <div class="window_sing_password">
+            <h5>PASSWORD</h5>
+            <input class="input_name">
+        </div>
+        <div class="window_sing_agree">
+            <img src="./src/img/kvadratik.svg">
+            <h5>Agree with the User Agreement and Privacy Policy </h5>
+        </div>
+        <div class="window_sing_send">
+            <button class="contactUs_button">SEND</button>
+        </div>
+    </div>
+    <div data-submenu="2" class="window_singUp_container">
+        <div class="window_sing_header">
+            <object type="image/svg+xml" data="./src/img/Logo-large.svg" class="logo-object"></object>
+        </div>
+        <div class="window_sing_choose">
+            <h3>Create acccount</h3>
+            <h3>Log in</h3>
+        </div>
+        <div class="window_sing_buttons">
+            <button class="google_button"><img src="./src/img/Google%20Logo.svg">Google Sign in</button>
+            <button class="facebook_button"><img src="./src/img/Facebook%20Logo.svg">Facebook Sign in</button>
+        </div>
+        <div class="window_sing_email">
+            <h5>EMAIL</h5>
+            <input class="input_name">
+        </div>
+        <div class="window_sing_password">
+            <h5>PASSWORD</h5>
+            <input class="input_name">
+        </div>
+        <div class="window_sing_send">
+            <button class="contactUs_button">SEND</button>
+        </div>
+    </div>
+</div>
 <div class="shield_fon">
 
 </div>
@@ -97,6 +155,52 @@
         </div>
     </div>
 </section>
+<div class="donate_container">
+    <div class="donate_mainText">
+        <h2>Donate to volunteers</h2>
+    </div>
+    <div class="donate_secondaryText">
+        <h4>Support your favourite animals. It is as simple as buying a cup of coffee.</h4>
+    </div>
+    <div class="donate_inputChoose">
+        <h5>Choose an animal</h5>
+        <input class="donate_inputChooses" type="text">
+    </div>
+    <div class="donate_payments">
+        <h5>Payments</h5>
+    </div>
+    <div class="donate_centralButton">
+        <button class="donate_centralButtons">Monthly</button>
+        <button class="donate_centralButtons">One-time</button>
+    </div>
+    <div class="donate_moneyTag">
+        <span class="donate_moneyTags">$3</span>
+        <span class="donate_moneyTags">$5</span>
+        <span class="donate_moneyTags">$10</span>
+        <span class="donate_moneyTags">$25</span>
+    </div>
+    <div class="donate_inputName">
+        <h5>Your name</h5>
+        <input class="donate_inputNames" type="text">
+    </div>
+    <div class="donate_inputEmail">
+        <h5>Your Email</h5>
+        <input class="donate_inputEmails" type="text">
+    </div>
+    <div class="payment_methods">
+        <img src="./src/img/Payment_Methods.svg">
+    </div>
+    <div class="donate_creditCart">
+        <input class="donate_creditCarts" type="text" name="donate_creditCarts" placeholder="     Card Number                                                  MM/YY           CVC">
+    </div>
+    <div class="donate_buttonSend">
+        <button class="donate_buttonSends">SEND</button>
+    </div>
+    <div class="donate_security">
+        <img class="donate_securitys" src="./src/img/Security.svg">
+        <h5>Your payment is protected</h5>
+    </div>
+</div>
 <section class="pandas_text">
     <div class="wrapper pandas_text_wrapper">
         <div class="layout-2-column">
@@ -127,9 +231,11 @@
         </div>
     </div>
 </section>
+
 <section class="donate_bot">
     <button class="bot_button">Donate to volunteers</button>
 </section>
+
 <footer class="footer">
     <div class="wrapper footer__wrapper">
         <div class="footer_navigations">
@@ -156,6 +262,5 @@
 </footer>
 
 <script src="src/app.js"></script>
-<script src="src/modal.js"></script>
 </body>
 </html>

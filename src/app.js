@@ -61,7 +61,24 @@ const design = navigationList[4]
 const buttonSend = document.querySelector(".contactUs_button")
 const shieldFon = document.querySelector(".shield_fon")
 const contactFon = document.querySelector(".contactUs_container")
+const LogIn = document.querySelector('.button__log')
+const SingUp = document.querySelector('.button__sing')
+const singInConteyner = document.querySelector('.window_singIn_container')
+const singUpConteyner = document.querySelector('.window_singUp_container')
+const chooseSing = document.querySelectorAll('.window_sing_choose')
+const donateButton = document.querySelector('.bot_button')
+const donateMenu = document.querySelector('.donate_container')
 
+
+LogIn.onclick = () =>{
+    shieldFon.style.display = 'block'
+    singUpConteyner.style.display = 'flex'
+}
+
+ SingUp.onclick = () =>{
+    shieldFon.style.display = 'block'
+    singInConteyner.style.display = 'flex'
+}
 
 contactUS.onclick = () => {
     shieldFon.style.display = 'block'
@@ -71,6 +88,9 @@ contactUS.onclick = () => {
 shieldFon.onclick = () => {
     contactFon.style.display = 'none'
     shieldFon.style.display = 'none'
+    singInConteyner.style.display = 'none'
+    singUpConteyner.style.display = 'none'
+    donateMenu.style.display = 'none'
 }
 
 buttonSend.onclick = () => {
@@ -78,14 +98,49 @@ buttonSend.onclick = () => {
     shieldFon.style.display = 'none'
 }
 
+chooseSing[0].onclick = () => {
+    singUpConteyner.style.display = 'flex'
+    singInConteyner.style.display = 'none'
+}
+
+chooseSing[1].onclick = () => {
+    singUpConteyner.style.display = 'none'
+    singInConteyner.style.display = 'flex'
+}
+
+donateButton.onclick = () => {
+    donateMenu.style.display = 'block'
+    shieldFon.style.display = 'block'
+}
 
 
-const SingList = document.querySelectorAll('.buttons')
+//document.addEventListener("click", documentActions);
 
-const LogIn = SingList[0]
-const SingUp = SingList[1]
+//function documentActions(e) {
+//    const  targetElement = e.target;
+//   if (targetElement.closest('[data-parent]')){
+//        const subMenuId = targetElement.dataset.parent ? targetElement.dataset.parent : null;
+//        const subMenu = document.querySelector('[data-submenu="${subMenuId}"]');
+//        if (subMenu) {
+//            targetElement.classList.add('_sub-menu-active');
+//            subMenu.classList.add('_sub-menu-open');
+//       }
+//        else {
+//            console.log( 'вай вай вай, нету такого меню')
+//        }
+//        e.preventDefault();
+//    }
+//}
 
-console.log(LogIn)
-console.log(SingUp)
+const donateChange = document.querySelectorAll('.donate_moneyTag')
+
+function setDonateButton (activeTagIndex) {
+    for (var i = 0; i <= fotoList.length - 1; i++)
+        donateChange[i].style.backgroundColor = '#E5E5E5'
+    donateChange[activeTagIndex].style.backgroundColor = '#2A8086'
+
+    }
+}
+
 
 

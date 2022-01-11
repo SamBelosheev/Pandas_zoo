@@ -97,47 +97,6 @@
 
 .icon_menu{
     display: none;
-    @media (max-width: $mobile) {
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 18px;
-        cursor: pointer;
-        z-index: 5;
-        span,
-        &::before,
-        &::after{
-            content:"";
-        transition: all 0.3s ease 0s;
-        left: 0;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: #FFFFFF;
-          }
-         &::before{
-            top: 0;
-          }
-          &::after{
-            bottom: 0;
-           }
-           span{
-               top: calc(50% - 1px);
-           }
-           .menu-open & {
-            span {
-                transform: scale(0);
-            }
-            &::before {
-                transform: rotate(-45deg);
-                top: calc(50% - 1px);
-             }
-             &::after {
-                  transform: rotate(-45deg);
-                  bottom: calc(50% - 1px);
-              }
-    }
-    }
 }
 
 
@@ -503,4 +462,253 @@ h5 {
     width: 100%;
     height: 100%;
     opacity: 0.5;
+}
+
+/*SingIN and SingUp*/
+
+.window_singIn_container{
+    position: relative;
+    z-index: 2;
+    float: right;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    display: none;
+    flex-direction: column;
+    width: 568px;
+    height: 774px;
+}
+
+.menu-catalog__link{
+    position: relative;
+    transition: color 0.3s ease 0s;
+        &:after {
+            content: "";
+            opacity: 0;
+            visibility: hidden;
+            position: relative;
+        }
+}
+
+.window_sing_header{
+    height: 125px;
+    justify-content: center;
+    background-color: #2A8086;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.window_sing_choose{
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.window_sing_buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.google_button{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    width: 216px;
+    height: 54px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.06);
+}
+
+.facebook_button{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    width: 216px;
+    height: 54px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.06);
+}
+
+.window_singIn_name{
+    margin-left: 60px;
+}
+
+.window_sing_email{
+    margin-left: 60px;
+}
+
+.window_sing_password{
+    margin-left: 60px;
+    margin-bottom: 8px;
+}
+
+.window_sing_agree{
+    font-family: 'Roboto', monospace;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.window_singUp_container{
+    float: right;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    display: none;
+    flex-direction: column;
+    width: 568px;
+    height: 635px;
+}
+
+
+/*donate*/
+
+.donate_container{
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    background-color: #FFFFFF;
+    width: 568px;
+    height: 883px;
+    margin-left: 600px;
+}
+
+.donate_inputChoose{
+    margin-left: 60px;
+}
+
+.donate_inputChooses{
+    font-size: 22px;
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.06);
+    width: 448px;
+    height: 54px;
+}
+
+.donate_inputName{
+    margin-left: 60px;
+}
+
+.donate_inputNames{
+    font-size: 22px;
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.06);
+    width: 448px;
+    height: 54px;
+}
+
+.donate_inputEmail{
+    margin-left: 60px;
+}
+
+.donate_inputEmails{
+    font-size: 22px;
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.06);
+    width: 448px;
+    height: 54px;
+}
+
+.donate_buttonSends{
+    margin-left: 60px;
+    width: 448px;
+    height: 54px;
+    color: #C5E1E5;
+    background-color: #2A8088;
+    border-radius: 100px;
+    margin-top: 10px;
+}
+
+.donate_mainText{
+    margin-left: 60px;
+    color: #0D444D;
+}
+
+.donate_secondaryText{
+    width: 448px;
+    color: #0D444D;
+    margin-left: 60px;
+    flex-wrap: wrap;
+    font-style: italic;
+}
+
+.donate_inputChoose{
+    margin-left: 60px;
+    color: #0D444D;
+}
+
+.donate_payments{
+    margin-left: 60px;
+    color: #0D444D;
+}
+
+.donate_centralButton{
+    margin-left: 60px;
+}
+
+.donate_centralButtons{
+    background-color: #FFFFFF;
+    width: 224px;
+    height: 54px;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.donate_moneyTag{
+    margin-left: 60px;
+    display: flex;
+}
+
+.donate_moneyTags{
+    margin-left: 5px;
+    background-color: #FFFFFF;
+    align-items: center;
+    justify-content: space-around;;
+    border-radius: 10px;
+    display: flex;
+    width: 74px;
+    height: 54px;
+    border: 2px dotted;
+    border-color: #19707D;
+    cursor: pointer;
+}
+
+.payment_methods{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.donate_creditCart{
+    margin-left: 60px;
+    width: 448px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.donate_creditCarts{
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.06);
+    width: 448px;
+    height: 54px;
+}
+
+.donate_security{
+    margin-left: 60px;
+    display: flex;
+}
+
+.donate_securitys{
+    margin-right: 12px;
 }
